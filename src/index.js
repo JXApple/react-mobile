@@ -3,7 +3,7 @@
  * @Author       : zengrongping
  * @Date         : 2021-03-03 23:12:59
  * @LastEditors  : zengrongping
- * @LastEditTime : 2021-03-04 16:05:15
+ * @LastEditTime : 2021-03-06 22:07:35
  * @FilePath     : \react-mobile\src\index.js
  */
 import React from "react";
@@ -12,7 +12,6 @@ import "./index.css";
 import App from "@/App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
-import "lib-flexible";
 ReactDOM.render(
   <React.StrictMode>
     <App />

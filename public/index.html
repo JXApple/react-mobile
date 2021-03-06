@@ -3,7 +3,7 @@
  * @Author       : zengrongping
  * @Date         : 2021-03-03 23:12:59
  * @LastEditors  : zengrongping
- * @LastEditTime : 2021-03-04 15:01:07
+ * @LastEditTime : 2021-03-06 16:17:15
  * @FilePath     : \react-mobile\public\index.html
 -->
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -33,7 +33,29 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root"></div><script src="//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js"></script>
+    <script>
+      window.onload = function() {
+        window.viewportUnitsBuggyfill.init({
+          hacks: window.viewportUnitsBuggyfillHacks
+        });
+    
+        // 验证输出
+        const winDPI = window.devicePixelRatio;
+        const uAgent = window.navigator.userAgent;
+        const screenHeight = window.screen.height;
+        const screenWidth = window.screen.width;
+        const winWidth = window.innerWidth;
+        const winHeight = window.innerHeight;
+    
+        console.log(winDPI, "设备 DPI");
+        console.log(uAgent, "客户端");
+        console.log(screenWidth, "屏幕宽度");
+        console.log(winHeight, "屏幕高度");
+        console.log(winWidth, "Windows Width");
+        console.log(winHeight, "Windows Height");
+      };
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
